@@ -1,7 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
-
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -29,29 +27,48 @@
       .pubs li:not(:last-child) {
         margin-bottom: 5px;
       }
+
+      * {
+        box-sizing: border-box;
+        font-family: Georgia;
+      }
+
+      /* Container for flexboxes */
+      .row {
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      /* Create four equal columns */
+      .column {
+        padding: 2%;
+      }
+
+      /* On screens that are 600px wide or less, make the columns stack on top of each other instead of next to each other 
+       https://www.w3schools.com/css/tryit.asp?filename=trycss_mediaqueries_flex */
+      @media screen and (max-width: 600px) {
+        .row {
+          flex-direction: column;
+        }
+      }
     </style>
-
   </head>
-
 
   <body>
     <div class="content">
-    <table>
-      <tr>
-        <td style="padding:20px;width:25%;">
-          <!-- img class="mugshot" src="2018_06_california_profile_cropped_centered.jpg" -->
+      <div class="row">
+        <div class="column" style="flex:25%;width:25%;">
           <img class="mugshot" src="cc.jpg">
-        </td>
-        <td>
+        </div>
+        <div class="column" style="flex:75%;">
           <h1>Christian Clark</h1>
           <p><a href="mailto:clark.3664@osu.edu">clark.3664@osu.edu</a> | <a href="https://scholar.google.com/citations?user=TLZ286oAAAAJ&hl=en">Google Scholar</a> | <a href="https://github.com/christian-clark">Github</a> | <a href="https://www.linkedin.com/in/christian-clark-465365113/">LinkedIn</a></p>
+        </div>
+      </div>
 
-          <p>
-            I am a fourth-year Ph.D. student in the Ohio State Linguistics Department, working with Professor <a href="https://www.asc.ohio-state.edu/schuler.77/">William Schuler</a>. 
-            I am interested in fundamental questions about language acquisition and comprehension: How do children pick up linguistic structure from the limited input they receive, and how do language users piece together complex meanings from sentences they hear or read? My research studies these questions using broad-coverage computational models that draw from advances in natural language processing.
-        </td>
-      </tr>
-    </table>
+      <p>I am a fourth-year Ph.D. student in the Ohio State Linguistics Department, working with Professor <a href="https://www.asc.ohio-state.edu/schuler.77/">William Schuler</a>. 
+      I am interested in fundamental questions about language acquisition and comprehension: How do children pick up linguistic structure from the limited input they receive, and how do language users piece together complex meanings from sentences they hear or read? My research studies these questions using broad-coverage computational models that draw from advances in natural language processing.</p>
+
 
     <h2>Education and Employment</h2>
       <ul>
@@ -63,13 +80,6 @@
 
     <h2>Publications and Abstracts</h2>
       <ul class="pubs">
-    <!--
-        <li>
-          Evidence for Composition Operations in Broad-Coverage Sentence Processing.
-          <br><b>Christian Clark</b>, William Schuler.
-          <br>[Manuscript submitted for publication.]
-        </li>
-    -->
         <li>
           <a href="https://aclanthology.org/2023.findings-acl.149.pdf">Categorial Grammar Induction from Raw Data</a>        
           <br><b>Christian Clark</b> and William Schuler,
