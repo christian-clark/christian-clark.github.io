@@ -18,6 +18,10 @@ a:hover {
     margin-bottom: 0px;
     margin-top: 0px;
 }
+ul {
+    padding-left: 30px;
+}
+
 .pubs li:not(:last-child) {
     margin-bottom: 10px;
 }
