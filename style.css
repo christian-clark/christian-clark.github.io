@@ -1,11 +1,14 @@
-a:link {
+/*@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap');*/
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600;1,700&display=swap');
+
+/*a:link {
     text-decoration: none;
     color: blue;
 }
 a:visited {
     text-decoration: none;
     color: blue;
-}
+}*/
 a:hover {
     text-decoration: underline;
 }
@@ -18,12 +21,13 @@ a:hover {
 .content {
     max-width: 700px;
     margin: auto;
-    background: white;
+    /*background: white;*/
     padding: 35px;
 }
 .info p {
     margin-bottom: 0px;
     margin-top: 0px;
+    font-size: 14px
 }
 ul {
     padding-left: 30px;
@@ -34,8 +38,35 @@ ul {
 }
 * {
     box-sizing: border-box;
-    font-family: Georgia;
+    /*font-family: Georgia;*/
 }
+/* Apply Crimson Text to the main body, falling back to Georgia if it fails to load */
+/* Apply Libre Baskerville to the main body */
+body {
+    font-family: 'Libre Baskerville', Georgia, serif;
+    /*font-size: 17px; /* Scaled slightly down to balance the wider letterforms */
+    line-height: 1.4; /* Increased spacing for readability */
+    color: #2b2c30; 
+    background-color: #fbfbfb; 
+  }
+  
+  /* Apply Montserrat to all your headers */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 500;
+    color: #1a1b1e; 
+    letter-spacing: -0.01em; 
+  }
+  
+  /* Navigation links and interaction buttons */
+  a {
+    color: #3b83da; 
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
 .bib {
     font-family: "Courier New";
 }
